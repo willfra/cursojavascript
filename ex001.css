@@ -75,3 +75,25 @@ p {
   cursor: pointer;
 
 }
+::-webkit-scrollbar {
+  background: ;
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background: ;
+
+}
+::-webkit-scrollbar-thumb {
+  background: #6f5dd1;
+}
+::-webkit-scrollbar-thumb:hover {
+
+}
+::-webkit-scrollbar-track-piece {
+  background: #3a1366;
+
+}
+::-webkit-scrollbar-corner {
+  background: rgb(255, 255, 255));
+}
+
