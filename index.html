@@ -5,35 +5,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./ex001.css">
-    <link rel="javascript" href="./ex001.js">
+    <!--<link rel="stylesheet" href="./css/style.css">-->
     <title>Meu primeiro programa</title>
 </head>
+
 
 <body>
     <div class="conteudo">
 
         <div class="main">
-            <script>
-                var nome = window.prompt('Qual é o seu nome?')
-                document.write(`<h1> Olá, <strong>${nome}</strong>! </h1>`)
-            </script>
+            <h1>Olá, <strong>Mundo!</strong></h1>
             <p>Já me livrei da maldição</p>
         </div>
 
         <div class="box-pesquisa">
-            <p>Qual seu nome?</p>
+            <p id="whatsYourName">Qual seu nome?</p>
             <input id="nome" type="text">
             <button>Enviar</button>
+
+        </div>
+        <div class="aula005">
+            <h1>Iniciando estudos DOM</h1>
+            <p>Aqui vai o resultado</p>
+            <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+            <div id="msg">Clique em mim</div>
         </div>
 
+        <script>
+            /*
+            var p1 = window.document.getElementsByTagName('p')[2]
+            p1.style.color = 'blue';
+            document.write(p1.innerText)
+
+            var d = window.document.getElementById('msg')
+            d.style.color = 'green'
+            d.innerText = 'Botão - Clique em mim'
+
+            var whatsYourName = document.getElementById('whatsYourName')
+            whatsYourName.style.color = 'green'
+
+            //Por Seletor
+            //querySelector
+
+            var whatsYourName = document.querySelector('p#whatsYourName')
+            whatsYourName.style.fontSize = '3rem'
+            */
+        </script>
     </div>
+
+
+
+
+
     <script>
         /*
         window.alert ('Minha primeira mensagem!') // Janela apenas com botão "OK"
         window.confirm ('Curtiu?') // Janela com botão "OK" e "Cancelar"
         */
-
 
         // Vai perguntar o nome
         //window.alert ('É um prazer te conhecer, ' + nome +'!')
@@ -44,9 +72,11 @@
 
         // (number + number) para adição
         // (string + string) para concatenação
+
         document.write(`Seu nome tem ${nome.length} letras.<br>`)
         document.write(`Seu nome em maiúsculo fica <strong>${nome.toUpperCase()}</strong>`)
         documento.write(`Seu nome em minusculo é ${nome.toLowerCase()}`)
+
         /*
         var n1 = 1545.50
         n1.toLocaleString('pt-br', {
@@ -68,28 +98,116 @@
         num += 2 //10 resultado
         num -= 2 //6 resultado
         */
-       /*
-        > var x = 8
-        undefined
-        > x
-        8
-        > var res = x % 2 == e ? 5: 9
-        Uncaught ReferenceError: e is not defined
-        > var res = x % 2 == 0 ? 5 : 9
-        undefined
-        > res
-        5
-        > var idade = 19
-        undefined
-        > var r = idade >= 18? "Maior" : "Menor"
-        undefined
-        > r
-        'Maior'
-        >
-        */
+        /*
+         > var x = 8
+         undefined
+         > x
+         8
+         > var res = x % 2 == e ? 5: 9
+         Uncaught ReferenceError: e is not defined
+         > var res = x % 2 == 0 ? 5 : 9
+         undefined
+         > res
+         5
+         > var idade = 19
+         undefined
+         > var r = idade >= 18? "Maior" : "Menor"
+         undefined
+         > r
+         'Maior'
+         >
+         */
+    </script>
+
+    <script class="css">
+        var body = document.querySelector('body')
+            body.style.backgroundColor = '#5d4fac'
+            body.style.color = 'white'
+            body.style.font = 'normal 20pt arial'
+            body.style.display = 'flex'
+            body.style.justifyContent = 'center'
+            body.style.alignItems = 'center'
+            body.style.flexDirection = 'column'
+            body.style.position = 'relative'
+            body.style.height = '100vh'
+
+        var conteudo = document.querySelector('.conteudo')
+            conteudo.style.display = 'flex'
+            conteudo.style.justifyContent = 'center'
+            conteudo.style.alignItems = 'center'
+            conteudo.style.flexDirection = 'column'
+            conteudo.style.bottom = '3rem'
+
+        var h1 = document.querySelector('h1')
+            h1.style.color = '#ffd35c'
+
+        var p = document.querySelector('p')
+            p.style.color = '#3a1366'
+            p.style.margin = '0.4rem'
+            p.style.fontWeight = '600'
+            p.style.color = '#3a1366'
+
+        var main = document.querySelector('.main')
+            main.style.display = 'flex'
+            main.style.justifyContent = 'center'
+            main.style.alignItems = 'center'
+            main.style.flexDirection = 'column'
+
+        var boxPesquisa = document.querySelector('.box-pesquisa')
+            boxPesquisa.style.padding = '3rem'
+            boxPesquisa.style.backgroundColor = '#7f6cec'
+            boxPesquisa.style.borderRadius = '20px'
+            boxPesquisa.style.marginTop = '1rem'
+            boxPesquisa.style.display = 'flex'
+            boxPesquisa.style.justifyContent = 'center'
+            boxPesquisa.style.alignItems = 'center'
+            boxPesquisa.style.flexDirection = 'column'
+            boxPesquisa.style.gap = '1rem'
+            boxPesquisa.style.boxShadow = '0px 10px 20px -15px #3a1366'
+
+        var boxPesquisaP = document.querySelector('.box-pesquisa p')
+            boxPesquisaP.style.color = '#ffffff'
+            boxPesquisaP.style.margin = '0'
+            boxPesquisaP.style.fontWeight = '200'
+
+        var boxPesquisaInput = document.querySelector('.box-pesquisa input')
+            boxPesquisaInput.style.borderRadius = '20px'
+            boxPesquisaInput.style.border = 'none'
+            boxPesquisaInput.style.padding = '7px'
+            boxPesquisaInput.style.fontSize = '1.1rem'
+            boxPesquisaInput.style.color = '#3a1366'
+
+        var boxPesquisaButton = document.querySelector('.box-pesquisa button')
+            boxPesquisaButton.style.border = 'none'
+            boxPesquisaButton.style.padding = '20px'
+            boxPesquisaButton.style.color = '#7f6cec'
+            boxPesquisaButton.style.backgroundColor = '#ffd35c'
+            boxPesquisaButton.style.borderRadius = '20px'
+            boxPesquisaButton.style.width = '100%'
+            boxPesquisaButton.style.fontWeight = '600'
+            boxPesquisaButton.style.fontSize = '1.5rem'
+            boxPesquisaButton.style.cursor = 'pointer'
+
+        var aula005 = document.querySelector ('.aula005')
+            aula005.style.display = 'flex'
+            aula005.style.justifyContent = 'center'
+            aula005.style.alignItems = 'center'
+            aula005.style.flexDirection = 'column'
+            aula005.style.color = '#3a1366'
+            
+            
+
+        var aula005H1 = document.querySelector ('.aula005 h1')
+            aula005H1.style.fontSize = '2rem'
+
+
+
+
+
 
 
     </script>
+
 </body>
 
 </html>
